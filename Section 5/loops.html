@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>javascript loops</title>
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            /*
+            var age = 18;
+            if(age >= 17)
+                {
+                    document.getElementById("out").innerHTML = "<h1>ADMIT</h1>";
+                }
+            var age = 19;
+            if(age >= 18)
+                {
+                    document.getElementById("out").innerHTML += "<h1>VOTE</h1>";
+                }
+            */
+            var age = 17;
+            var parent = false;
+            
+            if(age >= 17 || parent == true)
+                {
+                     document.getElementById('out').innerHTML = "<h1>ADMIT</h1>";
+                }else
+                    {
+                        document.getElementById('out').innerHTML ="<h1>DO NOT ADMIT</h1>";
+                    }
+        </script>
+	</body>
+</html>

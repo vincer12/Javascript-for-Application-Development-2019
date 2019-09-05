@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Do This: Debugging</title>
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            var from = prompt("Where do you want to start counting?");
+            var stop = parseInt(
+                        prompt("Where do you want to stop counting?"));
+            for(var i = from; i < stop + 1; i++)
+                {
+                    document.getElementById('out').innerHTML += i + "<br/>";
+                }
+            for(var x = from; x > stop - 1; x--)
+                {
+                    document.getElementById('out').innerHTML += x + "<br/>";
+                }
+        </script>
+	</body>
+</html>

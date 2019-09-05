@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Switch Statements</title>
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            var grade = "p";
+            
+            switch(grade){
+                case "A":
+                case "a":
+                    document.getElementById('out').innerHTML = "Great Job!";
+                    break;
+                case "B":
+                case "b":
+                    document.getElementById('out').innerHTML = "Almost There!";
+                    break;
+                case "C":
+                case "c":
+                    document.getElementById('out').innerHTML = "DONT give up keep trying.";
+                    break;      
+                case "D":
+                case "d":
+                    document.getElementById('out').innerHTML = "Come on you can do better!";
+                    break;    
+                case "F":
+                case "f":
+                    document.getElementById('out').innerHTML = "You Failed!";
+                    break;
+                default:
+                    document.getElementById('out').innerHTML = "Unrecognized Grade";
+                
+                    
+            }
+        </script>
+	</body>
+</html>

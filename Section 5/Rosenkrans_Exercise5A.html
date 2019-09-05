@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pattern #2</title>
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            // Pattern #1
+            var x = 1;
+            var out = "";
+                while(x < 11)
+                    {
+                       var y = 0;
+                       while (y<x)
+                       {
+
+                        out += "*" ;
+                        y++;
+                       }
+
+                    out += "<br/>";
+                    x++;
+                    }
+
+                var z = 10;
+                var output = "";
+                while(z > 0)
+                    {
+                       var k = 1;
+                       while (k<z)
+                       {
+
+                        output += "*" ;
+                        k++;
+                       }
+
+                    output += "<br/>";
+                    z--;
+                    }
+                    document.getElementById('out').innerHTML += out;
+                    document.getElementById('out').innerHTML += output;
+            
+            
+            // Pattern #2
+            for(x = 0; x < 4; x++)
+                {
+                    document.getElementById('out').innerHTML += "*_*_*_*_*_*_" + "<br/>";
+                }
+            
+        </script>
+	</body>
+</html>

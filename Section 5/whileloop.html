@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>While Loop</title>
+	</head>
+	<body>
+        <div id="out"></div>
+        <script>
+            //Do This exersize
+            /*
+            var x = 100;
+            var out = "";
+            while(x > -1)
+                {
+                    out += x;
+                    out += "<br/>";
+                    x--;
+                }
+            document.getElementById('out').innerHTML += out;
+            
+            var v = 10;
+            var out = "";
+            while(v < 1001)
+                {
+                    out += v;
+                    out += "<br/>";
+                    v = v+10;
+                }
+            document.getElementById('out').innerHTML += out;
+            */
+            
+            //The do...while loop
+            /*
+            var x = 99;
+            do
+                {
+                    if(x % 3 == 0)
+                        {
+                            document.getElementById('out').innerHTML += " " +  x + "<br/>";
+                        }
+                    x--;
+                }while(x>0);
+            */
+            // The for loop
+            /*for(initialization, continuation condition, counter)
+            {
+                ...do this stuff
+            }
+            */
+            for(var i=0; i < 25; i=i+5)
+                {
+                    document.getElementById('out').innerHTML += i + "";
+                }
+            
+        </script>
+	</body>
+</html>
