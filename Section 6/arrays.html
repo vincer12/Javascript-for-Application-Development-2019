@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Arrays</title>
+	</head>
+	<body>
+        <div id="output"></div>
+        
+        <script>
+            var computers = ["Apple", "IBM", "Commodore", "TRS-80", "Amiga"];
+            
+            var family = new Array("Dad", "Kevin", "Todd", "Vince");
+            
+            document.getElementById('output').innerHTML += computers[0] + "<br/>" + computers[2] + "<br/>";
+            
+            computers[0] = "Mac";
+            
+            document.getElementById('output').innerHTML += computers[0] + "<br/>";
+            document.getElementById('output').innerHTML += family + "<br/>";
+            
+            var out = "";
+            //Loop Through the array
+            for(var x = 0; x < computers.length; x++)
+                {
+                  out += computers[x];
+                  out += "<br/>"
+                }
+            document.getElementById('output').innerHTML = out;
+            
+            family.push("Grandpa")
+            document.getElementById('output').innerHTML = family.sort();
+            
+            computers.pop();
+            document.getElementById('output').innerHTML += "<p>" + computers.sort();
+        </script>
+	</body>
+</html>
