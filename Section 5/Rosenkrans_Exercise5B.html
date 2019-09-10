@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 5B</title>
+		
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            var rows = "";
+            var r = 0;
+            var x = "";
+            var columns = "";
+            var c = 0;
+            
+            rows = prompt("How many rows would you like?");
+            columns = prompt("How many columns would you like?")
+            while(r < rows)
+                {
+                    x += "*";
+                    r++;
+                }
+            while(c < columns)
+                        {
+                            x += "*";
+                            x += "<br/>"
+                            c++;
+                        }
+          
+           
+                            
+                   
+            document.getElementById('out').innerHTML += x;
+           
+            
+            
+            
+            
+            
+        </script>
+	</body>
+</html>

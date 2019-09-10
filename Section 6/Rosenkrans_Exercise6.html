@@ -1,0 +1,15 @@
+<script>
+    var names = [];
+    var theName = "";
+    while (theName != "XXX")
+    {
+        theName = prompt("Enter a name or XXX to Stop");
+        if(theName != "XXX"){
+            names.push(theName);
+        }
+    }
+    for(var x = 0; x < names.length; x++)
+    {
+        alert(names[x]);
+    }
+</script>
