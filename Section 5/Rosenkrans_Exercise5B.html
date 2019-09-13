@@ -12,32 +12,23 @@
             var r = 0;
             var x = "";
             var columns = "";
-            var c = 0;
+            
             
             rows = prompt("How many rows would you like?");
             columns = prompt("How many columns would you like?")
             while(r < rows)
                 {
-                    x += "*";
-                    r++;
-                }
-            while(c < columns)
+                    var c = 0;
+                    while(c < columns)
                         {
                             x += "*";
-                            x += "<br/>"
+                            
                             c++;
                         }
-          
-           
-                            
-                   
+                    x += "<br/>"
+                    r++;
+                }
             document.getElementById('out').innerHTML += x;
-           
-            
-            
-            
-            
-            
         </script>
 	</body>
 </html>
