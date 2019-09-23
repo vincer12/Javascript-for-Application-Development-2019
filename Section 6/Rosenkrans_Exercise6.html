@@ -22,9 +22,9 @@
             }
             for(var x = 0; x < grades.length; x++)
             {
-                out += grades[x];
+                out += grades.sort()[x];
                 out += "<br/>";
-                total += parseInt(grades+grades);
+                total += parseInt((grades+grades)); 
             }
             var average = total/length;
             out += "Class Average GPA: " + average;
