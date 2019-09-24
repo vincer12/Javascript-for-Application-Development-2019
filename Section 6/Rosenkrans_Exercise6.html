@@ -11,24 +11,62 @@
             var grades = [];
             var theGrade = "";
             var out = "";
-            var total = 0;
+            var total = "";
             var length = grades.length;
+            
+        
             while (theGrade != "XXX")
-            {
-                theGrade = prompt("Please Enter a list of GPA's or XXX to Stop");
-                if(theGrade != "XXX"){
-                    grades.push(theGrade);
+                {
+                    theGrade = prompt("Please Enter a list of GPA's or XXX to Stop");
+                    if(theGrade != "XXX")
+                    {
+                        grades.push(theGrade);
+                    }
                 }
-            }
             for(var x = 0; x < grades.length; x++)
-            {
-                out += grades.sort()[x];
-                out += "<br/>";
-                total += parseInt((grades+grades)); 
-            }
+                {
+                    out += grades.sort()[x];
+                    out += "<br/>";
+                    total += parseFloat(grades[x]); 
+                }
+            out += "Total: " + total;
+            out += "<br/>";
+            out += "<br/>";
+            
             var average = total/length;
             out += "Class Average GPA: " + average;
-            document.getElementById('output').innerHTML += "<h1>Class Grades: </h1>" + out;
+            out += "<br/>";
+            out += "<br/>";
+            
+            var largest = grades[0];
+            var smallest = grades[0];
+            for (var i = 1; i < grades.length; i++)
+                {
+                  if (grades[i] > largest)
+                  {
+                      largest = grades[i];
+                  }else if(grades[i] < smallest) 
+                    {
+                        smallest = grades[i];
+                    }
+                }
+            out += "The largest and smallest GPA's are: </br> ";
+            out += "Best GPA: ";
+            out +=(largest);
+            out +="<br/>";
+            out +="Worst GPA: ";
+            out +=(smallest);
+            out +="<br/>";
+            
+            var o = 3.4;
+            while(o >= grades)
+                {
+                    out += grades;
+                }
+               o++;
+            out += "while loop for grades above 3.4 ." + grades;
+            
+            document.getElementById('output').innerHTML += "<h1>Class GPA's: </h1>" + out;
         </script>
 	</body>
 </html>
