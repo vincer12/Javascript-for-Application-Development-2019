@@ -11,10 +11,8 @@
             var grades = [];
             var theGrade = "";
             var out = "";
-            var total = "";
-            var length = grades.length;
+            var total = 0;
             
-        
             while (theGrade != "XXX")
                 {
                     theGrade = prompt("Please Enter a list of GPA's or XXX to Stop");
@@ -23,18 +21,19 @@
                         grades.push(theGrade);
                     }
                 }
+            var length = grades.length;
             for(var x = 0; x < grades.length; x++)
                 {
                     out += grades.sort()[x];
                     out += "<br/>";
-                    total += parseFloat(grades[x]); 
+                    total += parseFloat((grades[x])); 
                 }
-            out += "Total: " + total;
             out += "<br/>";
             out += "<br/>";
+            out += "<h5>Total: </h5>" + total;
             
-            var average = total/length;
-            out += "Class Average GPA: " + average;
+            var average = total/grades.length;
+            out += "<h3> Class Average GPA: </h3>" + average;
             out += "<br/>";
             out += "<br/>";
             
@@ -50,7 +49,7 @@
                         smallest = grades[i];
                     }
                 }
-            out += "The largest and smallest GPA's are: </br> ";
+            out += "<h3>The largest and smallest GPA's are: </h3> ";
             out += "Best GPA: ";
             out +=(largest);
             out +="<br/>";
@@ -61,12 +60,13 @@
             var o = 3.4;
             while(o >= grades)
                 {
-                    out += grades;
+                    out += grades[o];
                 }
                o++;
-            out += "while loop for grades above 3.4 ." + grades;
+            out += "<h5>Grades above 3.4:  </h5>" + grades;
             
             document.getElementById('output').innerHTML += "<h1>Class GPA's: </h1>" + out;
+            
         </script>
 	</body>
 </html>

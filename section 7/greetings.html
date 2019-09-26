@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Greetings People</title>
+		
+	</head>
+	<body>
+        <div id="output"></div>
+        
+        <script>
+            function greetPeople()
+            {
+                alert("Greetings, People!")
+            }
+       // greetPeople();
+            
+            var out = "";
+            function personalGreetings(name)
+            {
+                out += "Greetings " + name + "<br/>";
+                document.getElementById('output').innerHTML = out;
+            }
+            personalGreetings("Bob");
+            personalGreetings("Mary");
+            
+            function howOld(name, age)
+            {
+                alert(name + " is " + age + " years old.");
+            }
+            
+            howOld("Bryan", 33);
+        </script>
+	</body>
+</html>
