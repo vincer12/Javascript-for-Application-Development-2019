@@ -21,7 +21,7 @@
                         grades.push(theGrade);
                     }
                 }
-            var length = grades.length;
+            //var list = grades.length;
             for(var x = 0; x < grades.length; x++)
                 {
                     out += grades.sort()[x];
@@ -30,7 +30,7 @@
                 }
             out += "<br/>";
             out += "<br/>";
-            out += "<h5>Total: </h5>" + total;
+            out += "<h3>Total: </h3>" + total;
             
             var average = total/grades.length;
             out += "<h3> Class Average GPA: </h3>" + average;
@@ -39,7 +39,7 @@
             
             var largest = grades[0];
             var smallest = grades[0];
-            for (var i = 1; i < grades.length; i++)
+            for (var i = 0; i < grades.length; i++)
                 {
                   if (grades[i] > largest)
                   {
@@ -50,20 +50,33 @@
                     }
                 }
             out += "<h3>The largest and smallest GPA's are: </h3> ";
-            out += "Best GPA: ";
+            out += "Largest GPA: ";
             out +=(largest);
             out +="<br/>";
-            out +="Worst GPA: ";
+            out +="Smallest GPA: ";
             out +=(smallest);
             out +="<br/>";
             
-            var o = 3.4;
-            while(o >= grades)
+            
+            var highGrades = grades[0];
+            var x = 3.4;
+            do
                 {
-                    out += grades[o];
-                }
-               o++;
-            out += "<h5>Grades above 3.4:  </h5>" + grades;
+                    if(x <= highGrades)
+                        {
+                            document.getElementById('output').innerHTML += " " +  highGrades + "<br/>";
+                        }
+                    x++;
+                }while(x<highGrades);
+            
+            out += "<h3>GPA's that are 3.4 or higher GPA's: </h3>";
+            out +=(highGrades);
+            out += "<br/>";
+          
+            
+            
+          
+            
             
             document.getElementById('output').innerHTML += "<h1>Class GPA's: </h1>" + out;
             
