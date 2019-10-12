@@ -21,7 +21,7 @@
                         grades.push(theGrade);
                     }
                 }
-            //var list = grades.length;
+            
             for(var x = 0; x < grades.length; x++)
                 {
                     out += grades.sort()[x];
@@ -35,7 +35,7 @@
             var average = total/grades.length;
             out += "<h3> Class Average GPA: </h3>" + average;
             out += "<br/>";
-            out += "<br/>";
+           
             
             var largest = grades[0];
             var smallest = grades[0];
@@ -49,7 +49,7 @@
                         smallest = grades[i];
                     }
                 }
-            out += "<h3>The largest and smallest GPA's are: </h3> ";
+            out += "<h3>The largest and smallest GPA's are: </h3>";
             out += "Largest GPA: ";
             out +=(largest);
             out +="<br/>";
@@ -57,28 +57,22 @@
             out +=(smallest);
             out +="<br/>";
             
-            
-            var highGrades = grades[0];
+            var y = 0;
             var x = 3.4;
-            do
+            var highGrades = "";
+            
+            for(y=0; y < grades.length; y++)
                 {
-                    if(x <= highGrades)
+                    if(grades[y] >=x)
                         {
-                            document.getElementById('output').innerHTML += " " +  highGrades + "<br/>";
+                            highGrades += grades[y];
                         }
-                    x++;
-                }while(x<highGrades);
-            
-            out += "<h3>GPA's that are 3.4 or higher GPA's: </h3>";
-            out +=(highGrades);
-            out += "<br/>";
-          
+                    highGrades+="<br/>"
+                }
+            out += "<h3>The Highest GPA's: </h3>" + highGrades;
             
             
-          
-            
-            
-            document.getElementById('output').innerHTML += "<h1>Class GPA's: </h1>" + out;
+            document.getElementById('output').innerHTML += "<h1>Class GPA's are: </h1>" + out;
             
         </script>
 	</body>
