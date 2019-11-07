@@ -12,7 +12,45 @@
                 var sum = value + 10;
                 return sum;
             }
+           // alert(addTen(46));
+            
+            function greetPeople()
+            {
+                alert("Greetings People!");
+            }
+            
+            //greetPeople();
+            //greetPeople();
+            var out = "";
+            function personalGreetings(name)
+            {
+                out = "Greetings " + name + "<br/>";   document.getElementById('output').innerHTML += out;
+            }
+            personalGreetings("Bob");
+            personalGreetings("Zeb");
+            personalGreetings("Sandy");
+            personalGreetings("Rick");
+            personalGreetings("Fred");
+            
+            function howOld(name, age)
+            {
+                alert(name + " is " + age + " years old.");
+            }
+            
+           // howOld("Bill", 89);
+            //howOld("Denny", 45);
+            
+            // **Return Function**
+            
+            function addTen(value)
+            {
+               var sum = value + 10;
+                //alert(value + 10) first example
+                return sum;
+            }
+            
             alert(addTen(46));
+            
         </script>
 	</body>
 </html>

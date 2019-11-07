@@ -1,0 +1,20 @@
+<div id="output"></div>
+    <script>
+        let cube = (myValue) => (myValue * myValue * myValue);
+        document.getElementById("output").innerHTML = cube(7);
+        
+        //Anonymous Function
+        let hi = function(){return "Hello John!"}
+        alert(hi());
+        
+        
+        //Function Constructor
+        let greetings = new Function("name", "return ('Hello ' + name)");
+        alert(greetings("Gina"));
+        
+        
+        //Lambda Function or Arrow Function
+        let salutations = (name) => ("Hello " + name);
+        alert(salutations("Bob"));
+        
+    </script>

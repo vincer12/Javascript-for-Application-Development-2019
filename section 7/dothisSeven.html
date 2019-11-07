@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Do This Section 7</title>
+		
+	</head>
+	<body>
+        <div id="output"></div>
+        <script>
+            var house = {};
+            //Properties
+            house.year = 1998;
+            house.color = "blue";
+            house.size = 2300;
+            house.style = "Ranch";
+            
+            // Method
+            house.newListing = function()
+            {
+                alert("This is a new listing!");
+            }
+            
+            house.sold = function()
+            {
+                alert("This House has SOLD!")
+            }
+            house.newListing();
+            house.sold();
+            
+            var out = "House Type: " + house.style;
+            out += "<br/>Year: " + house.year;
+            out += "<br/>Square Footage: " + house.size;
+            document.getElementById('output').innerHTML = out;
+        </script>
+	</body>
+</html>
