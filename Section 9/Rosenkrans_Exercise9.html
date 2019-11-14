@@ -10,9 +10,40 @@
         <div id="output"></div>
         
         <script>
-            let toDoList = Array["Clean Garage", "Mow Yard", "Wash Car", "laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes"];
             
-            let todo = function(){return "<h1>TO-DO: </h1>"}
+            
+            function todo()
+            {
+                var out = "<h1>This is my TO-DO List: </h1>";
+                document.getElementById('output').innerHTML = out;
+            }
+            
+            
+            function addTodos()
+            {
+                var toDoList = new Array("Clean Garage", "Mow Yard", "Wash Car", "laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes");
+                
+                let x = 0;
+                
+                while(x < toDoList.length)
+                {    
+                document.getElementById("output").innerHTML += toDoList[x] + "<br/>";
+                x++;
+                }
+                
+                /*
+                var out = "<h1>Testing</h1>";
+                document.getElementById('output').innerHTML += out;
+                */
+            }
+            
+            
+            todo();
+            addTodos();
+            
+            
+            
+            
         </script>
 	</body>
 </html>
