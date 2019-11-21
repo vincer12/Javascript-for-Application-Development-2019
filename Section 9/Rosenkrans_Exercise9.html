@@ -14,20 +14,20 @@
             
             function todo()
             {
-                var out = "<h1>This is my TO-DO List: </h1>";
+                var out = "<h1>TO-DO List: </h1>";
                 document.getElementById('output').innerHTML = out;
             }
             
             
             function addTodos()
             {
-                var toDoList = new Array("Clean Garage", "Mow Yard", "Wash Car", "laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes");
+                var toDoList = ["Clean Garage", "Mow Yard", "Wash Car", "laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes"];
                 
                 let x = 0;
                 
                 while(x < toDoList.length)
                 {    
-                document.getElementById("output").innerHTML += toDoList[x] + "<br/>";
+                document.getElementById("output").innerHTML += "<p>" + toDoList[x] + "</p>";
                 x++;
                 }
                 
