@@ -21,20 +21,16 @@
             
             function addTodos()
             {
-                var toDoList = ["Clean Garage", "Mow Yard", "Wash Car", "laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes"];
+                var toDoList = ["Clean Garage", "Mow Yard", "Wash Car", "Laundry", "Go Shopping", "Check Oil", "Organize Closet", "Vacuum", "Study", "Wash Dishes"];
                 
-                let x = 0;
                 
-                while(x < toDoList.length)
+                
+                for(let x = 0; x < toDoList.length; x++)
                 {    
                 document.getElementById("output").innerHTML += "<p>" + toDoList[x] + "</p>";
-                x++;
+                
                 }
                 
-                /*
-                var out = "<h1>Testing</h1>";
-                document.getElementById('output').innerHTML += out;
-                */
             }
             
             
