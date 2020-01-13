@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Maps Episode 10</title>
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            
+            // first way of writting a map
+            let team = new Map();
+            team.set('pitcher', 'David Cone');
+            team.set('catcher', 'Jorde Posada');
+            team.set('right_field', 'Dave Winfield');
+            
+            //alert(team.get('right_field'));
+            
+            // second way of writting a map
+            let music = new Map();
+            music.set('Journey', 'Faithfully')
+            .set('REO Speedwagon', 'Keep On Rollin')
+            .set('Scandal', 'The Warrior'); 
+            
+            //alert(music.get('Journey'));
+            
+            // third way of writting a map
+            let family = new Map([
+                ['mother', 'Joan'],
+                ['father', 'Rick'],
+                ['brother', 'Brett'],
+                ['sil', 'Kerry'],
+            ]);
+            
+            //alert(family.get('sil'));
+            
+           for(let r of family.entries()) //.keys  .values
+               {
+                   alert(r);   //alert(r[0] + ": " + r[1]);   you can iterate through the array from either the key or value.
+               }
+            //map methods
+            //family.clear     clears the map
+            
+            
+            
+        </script>
+	</body>
+</html>

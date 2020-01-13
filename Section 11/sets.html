@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Sets</title>
+		
+	</head>
+	<body>
+        <div id="out"></div>
+        
+        <script>
+            let songs = new Set();
+            songs.add("Dont Stop Believing");
+            songs.add("Eye Of the Tiger");
+            songs.add("Every Breathe You Take");
+            
+            
+            let gpas = new Set([4.0, 3.82, 2.225, 3.12]);
+            
+            let states = new 
+            Set().add("Connecticut").add("Texas").add("New York").add("Illinois").add("Florida");
+            
+                
+
+            if(states.has("Connecticut"))
+                {
+                    alert("Present!")
+                }
+            gpas.delete(4.0);
+            
+            for(let state of states)
+                {
+                    alert(state);
+                }
+            
+        </script>
+	</body>
+</html>

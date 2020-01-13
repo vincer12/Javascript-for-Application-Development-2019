@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Object Two</title>
+	</head>
+	<body>
+        <div id="output"></div>
+        <script src="Car.js"></script>
+        <script>
+            //Create object or instance
+            var myHonda = new Car("Sedan", "Honda", "Civic", 2017)
+            var myLexus = new Car("Sedan", "Lexus", "LC", 2015)
+            alert(myHonda.make)
+            alert(myHonda.model);
+            alert(myHonda.year)
+            
+            myLexus.accelerate();
+            myLexus.accelerate();
+            myLexus.accelerate();
+            myLexus.accelerate();
+            myLexus.accelerate();
+            myLexus.accelerate();
+            myLexus.accelerate();
+            
+            
+            alert(myLexus.model)
+            alert(myLexus.year);
+            alert(myLexus.model + " is going " + myLexus.speed + " MPH");
+            
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.accelerate();
+            myHonda.brake();
+        </script>
+	</body>
+</html>

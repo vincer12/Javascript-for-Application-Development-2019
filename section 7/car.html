@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>car object</title>
+	</head>
+	<body>
+        <div id="output"></div>
+        
+        <script>
+            //Car object
+            var car = {};
+            //Properties
+            car.type = "Sedan";
+            car.make = "Honda";
+            car.model = "Civic";
+            car.year = 2015;
+            car.weight = 3000;
+            //Method startCar
+            car.startCar = function()
+            {
+                alert("Car is started");
+            }
+            //Method stopCar
+            car.stopCar = function()
+            {
+                alert("Car is stopped");
+            }
+            //Output
+            var out = "Car Type: " + car.type;
+            out += "<br/>Car Make: " + car.make;
+            out += "<br/>Year: " + car.year;
+            //Method Calls
+            car.startCar();
+            car.stopCar();
+            document.getElementById('output').innerHTML = out;
+        </script>
+	</body>
+</html>
