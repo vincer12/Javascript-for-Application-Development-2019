@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Camp Whack-a-Doo</title>
-	</head>
-	<body>
-        <div id="out"></div>
-        <button id="campers">Campers Jobs</button>
+    <head>
+        <title>Map Exercise</title>
+    </head>
+    <body>
+        <h1>Camp Whack-a-Doo Chore List</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <select id="taskList">
+            <option value="Front Room Sweep">Front Room Sweep</option>
+          	<option value="Back Room Sweep">Back Room Sweep</option>
+          	<option value="Outside Grounds">Outside Grounds</option>
+          	<option value="Clean Toilet">Clean Toilet</option>
+          	<option value="Clean Sink">Clean Sink</option>
+          	<option value="Trash Patrol and Supplies">Trash Patrol and Supplies</option>
+      	</select><br />
+        <button id="btnToAddToMap">Add to Map Object</button>
+        <button id="btnDisplayMap">Display Map</button>
+        <div id="result"></div>
         <script>
-           const ADDBUTTON = document.getElementById('campers'); 
+            const ADDBUTTON = document.getElementById('btnToAddToMap');
+            const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
+            let tasks = new Map();
+            ADDBUTTON.onclick = function(){
+                const name = document.getElementById('name');
+                 const task = document.getElementById('taskList');
+                tasks.set(task.value, name.value);
+                name.value = "";
+                
+            };
+            DISPLAYBUTTON.onclick = function(){
+                let out = "";
+                for(let x of tasks.entries())
+                    {
+                        out += x[0] + ": " + x[1];
+                        out += "<br />";
+                    }
+                document.getElementById('result').innerHTML = out;
+            }
         </script>
-	</body>
+    </body>
 </html>
+

@@ -34,6 +34,7 @@ var Player = function(name, livesLeft, score, speed, gridLocationX, gridLocation
            }
        
     }
+    
     Player.prototype.moveUp = function()
     {
         if(this.gridLocationY > 0)
@@ -42,6 +43,7 @@ var Player = function(name, livesLeft, score, speed, gridLocationX, gridLocation
                 alert("Your Player moved 1 space up.");
             }
     }
+    
     Player.prototype.moveDown = function()
     {
         if(this.gridLocationY < 9)

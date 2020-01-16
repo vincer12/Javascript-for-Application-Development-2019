@@ -7,6 +7,7 @@
 		
 	</head>
 <body>
+        <h1></h1>
         <button id="randomNumber">Your Number Is</button>
         <button id="bingo">Bingo</button>
         
@@ -15,7 +16,8 @@
         <script>
             const RANDOMBUTTON = document.getElementById('randomNumber');
             const BINGOBUTTON = document.getElementById('bingo');
-            let numbers = new Set()
+			const H1 = document.querySelector("h1"); //any CSS selector will work in querySelector
+            const originalNumbers = new Set()
             .add("B1")
             .add("B2")
             .add("B3")
@@ -90,15 +92,51 @@
             .add("O72")
             .add("O73")
             .add("O74")
-            .add("O75")
-            
-            let numbers = new Set(originalNumbers);
-            
-            //click event for random button 
-            // click event for bingobutton
+            .add("O75");
+
+		//setup and restart
+		let numbers = new Set(originalNumbers);
+		let calledNumbers = new Set();
+
+		//click event for randombutton
+		RANDOMBUTTON.onclick = function() {
+          	//get random "index" based on size of numbers
+          	let randomIndex = Math.floor(Math.random() * numbers.size); //integer 0 - 74 when 75 items to pick from\
+          	let iterator = numbers.values();
+          	let val;
+          	for (let i=0; i<randomIndex; i++){
+              	val = iterator.next().value;
+            }
+          	//now val holds a random value from the set
+          	//add val to calledNumbers
+          	calledNumbers.add(val);
+          	//remove val from numbers
+          	numbers.delete(val);
+          	//display number called
+          	H1.innerHTML = val;
+        }
+
+		//click event for bingobutton
+		BINGOBUTTON.onclick = function(){
+          	//display all called numbers
+          	let numbersHtml = "";
+          	let iterator = calledNumbers.values();
+          	let val;
+          	//this seems to be best way to iterate through a set without a higher-order function (forEach)
+          	do {
+            	//assign val to the next item in the set, in order each was added to the set
+              	val = iterator.next();
+              	numbersHtml += val.value + ", "; //add next value in set to HTML string
+              	//NOTE: trailing comma not great....
+            }
+          	while (!val.done); //keep looping until val.done is true
+            document.getElementById('out').innerHTML = numbersHtml;
+          
+          	//reset
+          	numbers = new Set(originalNumbers);
+            calledNumbers = new Set();
+          	H1.innerHTML = "";
+        }  
         </script>
 	</body>
 </html>
-
-
-

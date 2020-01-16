@@ -11,8 +11,8 @@
             let grades = new Set([85,67,23,91,63,88,78,71,75,82,92,80]);
             for(let grade of grades)
             {
-                sum = grade;
-                document.getElementById('scores').innerHTML += grades + " ";
+                sum += grades;
+                document.getElementById('scores').innerHTML += grade + " ";
             }
             let average = sum/grades.size;
             
