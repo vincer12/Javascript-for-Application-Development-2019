@@ -7,7 +7,6 @@
 		
 	</head>
 <body>
-        <h1></h1>
         <button id="randomNumber">Your Number Is</button>
         <button id="bingo">Bingo</button>
         
@@ -16,8 +15,7 @@
         <script>
             const RANDOMBUTTON = document.getElementById('randomNumber');
             const BINGOBUTTON = document.getElementById('bingo');
-			const H1 = document.querySelector("h1"); //any CSS selector will work in querySelector
-            const ORIGINALNUMBERS = new Set()
+            const originalNumbers = new Set()
             .add("B1")
             .add("B2")
             .add("B3")
@@ -95,7 +93,7 @@
             .add("O75");
 
 		//setup and restart
-		let numbers = new Set(ORIGINALNUMBERS);
+		let numbers = new Set(originalNumbers);
 		let calledNumbers = new Set();
 
 		//click event for randombutton
@@ -109,11 +107,9 @@
             }
           	//now val holds a random value from the set
           	//add val to calledNumbers
-          	calledNumbers.add(val);
+          
           	//remove val from numbers
-          	numbers.delete(val);
-          	//display number called
-          	H1.innerHTML = val;
+          	
         }
 
 		//click event for bingobutton
@@ -133,9 +129,8 @@
             document.getElementById('out').innerHTML = numbersHtml;
           
           	//reset
-          	numbers = new Set(ORIGINALNUMBERS);
-            calledNumbers = new Set();
-          	H1.innerHTML = "";
+          	let numbers = new Set(originalNumbers);
+            let calledNumbers = new Set();
         }  
         </script>
 	</body>
