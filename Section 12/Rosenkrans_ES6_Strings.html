@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rosenkrans ES6 Strings</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            let song = {
+                clothing: prompt("Enter a piece of clothing."),//a
+                body: prompt("Enter a body part."),            //b
+                bodyTwo: prompt("Enter a second body part."),  //c
+                verb: prompt("Verb base form."),               //d
+                bodyThree: prompt("enter a third body part."), //e
+                verbTwo: prompt("Enter a second verb"),        //f
+                noun: prompt("Enter a plural noun."),          //g
+                nounTwo: prompt("Enter a second plural noun."),//h
+                verbThree: prompt("Enter one more verb base form.")//i
+            };
+            
+            let songPlay = function(object){
+            let output = `Put on some music, then put on a ${object.clothing} Stand with your ${object.body} ever so slightly bent, Put your hands in fists. Place your ${object.bodyTwo} relaxed, at the side of your body Begin to ${object.verb} your ${object.bodyThree} left and right around your torso in the oposite direction to your hips. Keep doing it and increase speed and ${object.verbTwo}  ${object.noun} occasionally for effect. After building confidence, you can also ${object.nounTwo}  ${object.verbThree} with your arms if disired, but this is not mandatory.`;
+                return output;
+            }
+            
+            document.getElementById('output').innerHTML = songPlay(song);    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destructuring ES6 JSON</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            
+           let person = {
+               first: "Vince",
+               last: "Rosenkrans",
+               age: 52,
+               city: "Parker",
+               state: "Colorado"
+           };
+            /*
+            console.log(person.last);
+            */
+            
+            let { first, last, age, city, state} = person;
+            console.log(first);
+            console.log(last);
+            console.log(age);
+            console.log(city);
+            console.log(state);
+            
+            
+            let company = {
+                name: "Framework Television",
+                    social: { 
+                        twitter: "https://twitter.com/fw_social",
+                            facebook:
+                            "https://facebook.com/frameworktechnicallyspeaking"
+                    }
+            }
+            //console.log(company.social.twitter);
+            //console.log(company.social.facebook);
+            let { twitter, facebook } = company.social;
+            console.log(twitter);
+            console.log(facebook);
+            
+            
+        </script>
+    </body>
+</html>

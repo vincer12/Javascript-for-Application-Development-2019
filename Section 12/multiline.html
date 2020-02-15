@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>multiline string and string templating or string interpalation.</title>
+    </head>
+    <body>
+        <div id="output"></div>
+        <script>
+            //this is a multiline string below.
+            let poem = `Roses are red
+violets are blue
+I like chocolate
+and so do you!`
+            console.log(poem);
+            //document.getElementById('output').innerHTML = poem; 
+            
+            // this section is about string interpalation below.
+            // Mark also referred to this a JSON formatting.
+            // using key value pairs to setup a varible object.
+            let employee = {   //employee object.
+                name: "John",
+                position: "Production Assistant",
+                city: "Norwalk",
+                state: "Connecticut",
+                age: 30
+            };
+            // this is the employee function used to access the employee variable.
+            let employeeInfo = function(object){
+                let output = `${object.name} is a ${object.position} in our ${object.city} ${object.state} location and is ${object.age} years old.`;
+                return output;
+            }
+            document.getElementById("output").innerHTML = employeeInfo(employee);  
+            console.log(`The employees name is: ${employee.name} `);
+            
+            // plain variable using string templating. or interpalated.
+            let instructor = "Mark Lassoff"; 
+            console.log(`Instructor: ${instructor}`)
+        </script>
+    </body>
+</html>
